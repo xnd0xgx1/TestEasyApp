@@ -1,0 +1,24 @@
+/* table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+  }
+  
+  tr:nth-child(even) {
+    background-color: rgba(210, 210, 210, 0.4);
+  }
+  
+  th:nth-child(even),td:nth-child(even) {
+    background-color: rgba(212, 212, 212, 0.4);
+  } */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #DDD;
+  }
+  
+  tr:hover {background-color: #bfbfbfa6;}

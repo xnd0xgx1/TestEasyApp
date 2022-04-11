@@ -1,0 +1,47 @@
+
+<div align="center" style="margin: auto; width: 200px;">
+<br>
+<br>
+
+<form>
+
+    <label for="uname"><b>Añadir o remover empresas</b></label>
+    <input type="text" #Marcas placeholder="marcas" >
+    <button type="button" (click)="addmarcas(Marcas)">Añadir</button>
+    <button type="button" (click)="removemarcas(Marcas)">Remover</button>
+
+
+</form>
+<br>
+<button (click)="startdata()">Iniciar observación</button>
+<button (click)="stopdata()">Detener observación</button>
+
+</div>
+
+<br>
+<br>
+
+<div  align = "center" style="margin: auto;width: 200px;">
+    <button (click)="exportexcel()" style="background-color: green; color: white; border-radius: 12px;">Descargar excel</button>
+<br>
+<table id="exceldata" style="border-color: grey;">
+    <tr>
+        <th></th>
+        <th style="background-color: yellow;">USD</th>
+        <th style="background-color: yellow;">Tipo de Cambio</th>
+    </tr>
+    <tr>
+        <th></th>
+        <th>{{usd}}</th>
+        <th></th>
+    </tr>
+
+<tr >
+    <th *ngFor="let column of tableHeaders" style="background-color: whitesmoke;color: black;">{{column}}</th>
+</tr>
+<tr *ngFor=" let row of tableRows" >
+    <td *ngFor="let column of tableHeaders" style="text-align: center;">{{row[column]}}</td>
+</tr>
+
+</table>
+</div>

@@ -1,0 +1,8 @@
+{
+    "/g/*":{
+        "target":"https://finance.yahoo.com/",
+        "secure" : true,
+        "changeOrigin": true
+        
+    }
+}
